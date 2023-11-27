@@ -1,0 +1,7 @@
+2023-Oct-18 12:07:24 pm [main] INFO  com.qa.automation.core.WebDriverFactory - Setting up for browser path is completed
+2023-Oct-18 12:07:24 pm [main] INFO  com.qa.automation.core.WebDriverFactory - Setting up chrome binary completed
+2023-Oct-18 12:07:27 pm [main] INFO  com.qa.automation.core.WebDriverFactory - Chrome Browser invoked
+2023-Oct-18 12:07:27 pm [main] INFO  com.qa.automation.core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2023-Oct-18 12:07:29 pm [main] INFO  com.qa.automation.core.WebDriverFactory - Browser navigated to the url: https://www.amazon.in/
+2023-Oct-18 12:07:50 pm [main] INFO  com.qa.automation.core.WebDriverFactory - Driver closed
+2023-Oct-18 12:07:50 pm [main] INFO  com.qa.automation.stepdefs.stepdef - Browser got closed

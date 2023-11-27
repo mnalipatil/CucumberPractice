@@ -1,17 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>CucumberBDDFWPractice</groupId>
   <artifactId>CucumberBDDFWPractice</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-    <properties>
+  <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<cucumber.version>6.6.1</cucumber.version>
 	</properties>
-	
-	<dependencies>
+
+  <dependencies>
  		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -47,9 +49,39 @@
 		</dependency>
 
 		<dependency>
-			<groupId>CucumberBDDFW</groupId>
-			<artifactId>CucumberBDDFW</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.13.1</version>
 		</dependency>
-	</dependencies>	
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.13.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.5.3</version>
+			<scope>test</scope>
+		</dependency>
+
+  </dependencies>
+  
+  	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M1</version>
+				<configuration>
+					<forkCount>3</forkCount>
+					<reuseForks>false</reuseForks>
+					<parallel>methods</parallel>
+					<threadCount>3</threadCount>
+					<perCoreThreadCount>false</perCoreThreadCount>
+					<!-- <useUnlimitedThreads>true</useUnlimitedThreads>-->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
